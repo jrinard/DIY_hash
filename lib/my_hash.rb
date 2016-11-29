@@ -20,10 +20,16 @@ class MyHash
   define_method(:myFetch) do |key|
     relKey = @keys.index(key)
     @values.at(relKey)
-
-
   end
 
+  define_method(:mHval) do |key|
+    relKey = @keys.index(key)
+    if @values.at(relKey) != ""
+      key + " has value"
+    else
+      key + " has no value"
+    end
+  end
 
 
 end
